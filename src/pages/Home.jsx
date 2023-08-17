@@ -1,11 +1,12 @@
 import { Footer, Header, Layout, Main } from "../features/ui";
-import { RoomList } from "../features/room/component";
+import { RoomHead, RoomList } from "../features/room/component";
 
 const Home = () => {
   return (
     <Layout>
       <Header />
       <Main>
+        <RoomHead />
         <RoomList />
       </Main>
       <Footer />
