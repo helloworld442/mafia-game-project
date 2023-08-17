@@ -1,9 +1,10 @@
-import { Footer, Header, Layout } from "../features/ui";
+import { Footer, Header, Layout, Main } from "../features/ui";
 
 const SignIn = () => {
   return (
     <Layout>
       <Header />
+      <Main></Main>
       <Footer />
     </Layout>
   );
