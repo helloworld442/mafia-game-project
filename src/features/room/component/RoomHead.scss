@@ -8,6 +8,14 @@
   flex-direction: column;
 }
 
+.room-head-num {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  font-size: 1.2rem;
+  transform: translateY(-50%);
+}
+
 #room-head-button {
   position: absolute;
   top: 50%;
