@@ -11,21 +11,17 @@
   &:hover {
     transform: scale(1.03);
   }
-
-  & + & {
-    margin-top: 24px;
-  }
 }
 
 .room-item-id {
   position: absolute;
   top: 50%;
   left: 12px;
-  width: 36px;
-  height: 36px;
+  width: 30px;
+  height: 30px;
   border-radius: 100%;
   transform: translateY(-50%);
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #fff;
   background: #333;
   display: flex;
@@ -38,7 +34,7 @@
   top: 50%;
   left: 60px;
   transform: translateY(-50%);
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .room-item-info {
@@ -49,13 +45,13 @@
   text-align: center;
 
   .room-item-full {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 0.4rem;
   }
 
   .room-item-game {
     &.start {
-      font-size: 1.2rem;
+      font-size: 1rem;
       color: tomato;
     }
   }

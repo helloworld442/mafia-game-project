@@ -6,15 +6,13 @@ import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
 const Footer = () => {
   const [active, setAcitve] = useState(false);
 
-  const onClickFooter = () => setAcitve(true);
+  const onClickFooter = () => setAcitve(!active);
 
   return (
     <footer className={classNames("footer-nav", { active })} onClick={onClickFooter}>
-      {!active ? (
-        <h2 className="footer-dash-icon">
-          <FontAwesomeIcon icon={faEllipsis} />
-        </h2>
-      ) : null}
+      <h2 className="footer-dash-icon">
+        <FontAwesomeIcon icon={faEllipsis} />
+      </h2>
     </footer>
   );
 };
