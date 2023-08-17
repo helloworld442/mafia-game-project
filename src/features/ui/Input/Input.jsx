@@ -15,4 +15,4 @@ const InputValue = ({ type, value, onChange }) => {
 Input.Label = InputLabel;
 Input.Value = InputValue;
 
-export default Input;
+export { Input };

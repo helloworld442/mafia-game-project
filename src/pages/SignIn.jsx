@@ -1,10 +1,12 @@
-import { Footer, Header, Layout, Main } from "../features/ui";
+import { Footer, Layout, Main } from "../features/ui";
+import { Login } from "../features/user/component";
 
 const SignIn = () => {
   return (
     <Layout>
-      <Header />
-      <Main></Main>
+      <Main>
+        <Login />
+      </Main>
       <Footer />
     </Layout>
   );
