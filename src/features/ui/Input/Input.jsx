@@ -1,4 +1,5 @@
 import "./Input.scss";
+import classNames from "classnames";
 
 const Input = ({ label, type, name, value, error, onChange }) => {
   return (
@@ -6,7 +7,15 @@ const Input = ({ label, type, name, value, error, onChange }) => {
       <label htmlFor={label} className="input-label">
         {label}
       </label>
-      <input id={label} type={type} name={name} value={value} error={error} onChange={onChange} />
+      <input
+        id={label}
+        className={classNames("input", { error })}
+        type={type}
+        name={name}
+        value={value}
+        error={error}
+        onChange={onChange}
+      />
       <span className="input-error">{error}</span>
     </div>
   );
