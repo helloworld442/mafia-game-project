@@ -1,20 +1,24 @@
+import { Suspense, lazy } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "../pages/Home";
-import Write from "../pages/Write";
-import SignIn from "../pages/Signin";
-import SignUp from "../pages/SignUp";
-import Setting from "../pages/Setting";
+
+const Home = lazy(() => import("../pages/Home"));
+const Write = lazy(() => import("../pages/Write"));
+const SignIn = lazy(() => import("../pages/SignIn"));
+const SignUp = lazy(() => import("../pages/SignUp"));
+const Setting = lazy(() => import("../pages/Setting"));
 
 const Router = () => {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/write" element={<Write />} />
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/setting" element={<Setting />} />
-      </Routes>
+      <Suspense fallback={<div>loading</div>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/write" element={<Write />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/setting" element={<Setting />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 };
