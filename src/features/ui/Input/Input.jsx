@@ -1,22 +1,15 @@
 import "./Input.scss";
 
-const Input = ({ children }) => {
-  return <div className="input-box">{children}</div>;
-};
-
-const InputLabel = ({ label }) => {
+const Input = ({ label, type, name, value, error, onChange }) => {
   return (
-    <label htmlFor="input-value" className="input-label">
-      {label}
-    </label>
+    <div className="input-box">
+      <label htmlFor={label} className="input-label">
+        {label}
+      </label>
+      <input id={label} type={type} name={name} value={value} error={error} onChange={onChange} />
+      <span className="input-error">{error}</span>
+    </div>
   );
 };
-
-const InputValue = ({ type, value, onChange }) => {
-  return <input id="input-value" type={type} value={value} onChange={onChange} />;
-};
-
-Input.Label = InputLabel;
-Input.Value = InputValue;
 
 export { Input };

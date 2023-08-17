@@ -7,14 +7,8 @@ const Login = () => {
   return (
     <form id="login-form">
       <img src={HeaderLogo} alt="Mafia" id="login-logo" />
-      <Input>
-        <Input.Label label="email" />
-        <Input.Value type="text" />
-      </Input>
-      <Input>
-        <Input.Label label="password" />
-        <Input.Value type="password" />
-      </Input>
+      <Input label="email" type="text" name="email" />
+      <Input label="password" type="password" name="password" />
       <Button size="large" fullWidth primary>
         SIGN IN
       </Button>
