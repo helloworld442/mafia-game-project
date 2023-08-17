@@ -1,13 +1,11 @@
-import { RoomHead, RoomTemplate } from "../features/room/component";
+import { RoomTemplate } from "../features/room/component";
 import { Footer, Header, Layout } from "../features/ui";
 
 const Home = () => {
   return (
     <Layout>
       <Header />
-      <RoomTemplate>
-        <RoomHead />
-      </RoomTemplate>
+      <RoomTemplate></RoomTemplate>
       <Footer />
     </Layout>
   );

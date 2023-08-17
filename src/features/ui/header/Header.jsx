@@ -1,21 +1,20 @@
 import "./Header.scss";
 import { useNavigate } from "react-router-dom";
-import { HomeOutlined, LeftOutlined } from "@ant-design/icons";
+import { SettingOutlined } from "@ant-design/icons";
+import HeaderLogo from "../../../assets/headerlogo.png";
 
 const Header = () => {
   const navigateTo = useNavigate();
 
-  const goBackButton = () => navigateTo(-1);
-
   const goHomeButton = () => navigateTo("/");
+
+  const goSettingButton = () => navigateTo("/setting");
 
   return (
     <header className="header-nav">
-      <span className="header-text" onClick={goBackButton}>
-        <LeftOutlined />
-      </span>
-      <span className="header-text" onClick={goHomeButton}>
-        <HomeOutlined />
+      <img src={HeaderLogo} alt="Mafia" className="header-logo" onClick={goHomeButton} />
+      <span className="header-text" onClick={goSettingButton}>
+        <SettingOutlined />
       </span>
     </header>
   );
