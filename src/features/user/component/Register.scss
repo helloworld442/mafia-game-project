@@ -1,0 +1,44 @@
+#register-form {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+  transform: translate(-50%, -50%);
+}
+
+#register-logo {
+  width: 250px;
+  height: auto;
+  animation: iconmove 2s infinite linear;
+}
+
+#register-footer {
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #aaa;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    color: #333;
+  }
+}
+
+@keyframes iconmove {
+  0% {
+    transform: translate(0, -10%);
+  }
+  50% {
+    transform: translate(0, -20%);
+  }
+
+  100% {
+    transform: translate((0, -10%));
+  }
+}
