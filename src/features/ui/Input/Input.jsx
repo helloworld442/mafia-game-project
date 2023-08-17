@@ -1,7 +1,8 @@
 import "./Input.scss";
+import { memo } from "react";
 import classNames from "classnames";
 
-const Input = ({ label, type, name, value, error, onChange }) => {
+const Input = memo(({ label, type, name, value, error, onChange }) => {
   return (
     <div className="input-box">
       <label htmlFor={label} className="input-label">
@@ -19,6 +20,6 @@ const Input = ({ label, type, name, value, error, onChange }) => {
       <span className="input-error">{error}</span>
     </div>
   );
-};
+});
 
 export { Input };
