@@ -7,7 +7,6 @@ const SignIn = () => {
       <Main>
         <Login />
       </Main>
-      <Footer />
     </Layout>
   );
 };
