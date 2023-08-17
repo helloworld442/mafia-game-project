@@ -5,12 +5,12 @@ const Login = () => {
   return (
     <form id="login-form">
       <Input>
-        <Input.Label />
-        <Input.Value />
+        <Input.Label label="email" />
+        <Input.Value type="text" />
       </Input>
       <Input>
-        <Input.Label />
-        <Input.Value />
+        <Input.Label label="password" />
+        <Input.Value type="password" />
       </Input>
     </form>
   );

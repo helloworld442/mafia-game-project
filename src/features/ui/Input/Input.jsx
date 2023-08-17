@@ -5,11 +5,15 @@ const Input = ({ children }) => {
 };
 
 const InputLabel = ({ label }) => {
-  return <label className="input-label">{label}</label>;
+  return (
+    <label htmlFor="input-value" className="input-label">
+      {label}
+    </label>
+  );
 };
 
 const InputValue = ({ type, value, onChange }) => {
-  return <input type={type} value={value} onChange={onChange} />;
+  return <input id="input-value" type={type} value={value} onChange={onChange} />;
 };
 
 Input.Label = InputLabel;
