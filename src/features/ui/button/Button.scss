@@ -1,5 +1,4 @@
 .button {
-  display: inline-block;
   border: none;
   outline: none;
   border-radius: 8px;
@@ -26,7 +25,7 @@
 
   &.primary {
     color: #333;
-    background: none;
+    background: gainsboro;
     border: 5px solid #333;
     &:hover {
       background: #333;

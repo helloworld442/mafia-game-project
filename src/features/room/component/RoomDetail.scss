@@ -9,7 +9,7 @@
   z-index: 100;
 
   &.active {
-    height: 500px;
+    height: 430px;
   }
 }
 
@@ -32,8 +32,60 @@
 .room-detail-back {
   position: absolute;
   top: 48px;
-  right: 18px;
+  right: 24px;
   font-size: 1.8rem;
   color: #fff;
   cursor: pointer;
+}
+
+.title-label {
+  position: absolute;
+  top: 90px;
+  left: 24px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.room-detail-title {
+  position: absolute;
+  top: 130px;
+  left: 24px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.full-label {
+  position: absolute;
+  top: 200px;
+  left: 24px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.room-detail-full {
+  position: absolute;
+  top: 230px;
+  left: 24px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.room-detail-button {
+  position: absolute;
+  top: 350px;
+  width: 90%;
+  height: 60px;
+  margin: 0 20px;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  color: #333;
+  text-decoration: none;
+  background: gainsboro;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
