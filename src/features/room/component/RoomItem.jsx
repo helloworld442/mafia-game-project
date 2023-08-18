@@ -25,7 +25,12 @@ const RoomItem = () => {
     <>
       <li className="room-item" onClick={onOpenModal}>
         {/* 방 고육 배경화면 */}
-        <img className="room-item-background" src={imgData[randomNumber]} alt="bloodImg" />
+        <img
+          rel="dns-preconnect"
+          className="room-item-background"
+          src={imgData[randomNumber]}
+          alt="bloodImg"
+        />
 
         {/* 방 고유 아이디 */}
         <h4 className="room-item-id">1</h4>
