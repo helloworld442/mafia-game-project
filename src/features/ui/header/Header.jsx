@@ -1,22 +1,21 @@
 import "./Header.scss";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import HeaderLogo from "../../../assets/headerlogo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
-  const navigateTo = useNavigate();
-
-  const goHomeButton = () => navigateTo("/");
-
-  const goSettingButton = () => navigateTo("/setting");
-
   return (
     <header className="header-nav">
-      <img src={HeaderLogo} alt="Mafia" className="header-logo" onClick={goHomeButton} />
-      <span className="header-text" onClick={goSettingButton}>
+      {/* 헤더 홈으로 가는 링크 아이콘*/}
+      <Link to="/">
+        <img src={HeaderLogo} alt="Mafia" className="header-logo" />
+      </Link>
+
+      {/* 헤더 설정으로 가는 링크 아이콘*/}
+      <Link to="/setting" className="header-text">
         <FontAwesomeIcon icon={faEllipsisVertical} />
-      </span>
+      </Link>
     </header>
   );
 };

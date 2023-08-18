@@ -6,11 +6,12 @@ import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
 const Footer = () => {
   const [active, setAcitve] = useState(false);
 
-  const onClickFooter = () => setAcitve(!active);
+  const onClickFooterIcon = () => setAcitve(!active);
 
   return (
-    <footer className={classNames("footer-nav", { active })} onClick={onClickFooter}>
-      <h2 className="footer-dash-icon">
+    <footer className={classNames("footer-nav", { active })}>
+      {/* footer 열람 트리커 버튼 */}
+      <h2 className="footer-dash-icon" onClick={onClickFooterIcon}>
         <FontAwesomeIcon icon={faEllipsis} />
       </h2>
     </footer>
