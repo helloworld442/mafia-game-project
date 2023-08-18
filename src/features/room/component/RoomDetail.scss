@@ -13,7 +13,7 @@
   }
 }
 
-.room-detail-background {
+.room-detail-background::before {
   content: "";
   position: fixed;
   top: 0;
