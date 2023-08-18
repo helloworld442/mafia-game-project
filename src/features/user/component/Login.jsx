@@ -1,6 +1,6 @@
 import "./Login.scss";
 import { AuthInput, Button } from "../../ui";
-import HeaderLogo from "../../../assets/headerlogo.png";
+import HeaderLogo from "../../../assets/headerlogo.webp";
 import { Link } from "react-router-dom";
 import { useCallback, useState } from "react";
 
