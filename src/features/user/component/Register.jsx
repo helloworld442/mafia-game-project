@@ -1,5 +1,5 @@
 import "./Register.scss";
-import { Button, Input } from "../../ui";
+import { AuthInput, Button } from "../../ui";
 import HeaderLogo from "../../../assets/headerlogo.png";
 import { Link } from "react-router-dom";
 import { useCallback, useState } from "react";
@@ -60,7 +60,7 @@ const Register = () => {
   return (
     <form id="register-form" onSubmit={onSubmitInput}>
       <img src={HeaderLogo} alt="Mafia" id="register-logo" />
-      <Input
+      <AuthInput
         label="nickname"
         type="text"
         name="nickname"
@@ -68,7 +68,7 @@ const Register = () => {
         error={errors.nickname}
         onChange={onChangeInput}
       />
-      <Input
+      <AuthInput
         label="email"
         type="text"
         name="email"
@@ -76,7 +76,7 @@ const Register = () => {
         error={errors.email}
         onChange={onChangeInput}
       />
-      <Input
+      <AuthInput
         label="password"
         type="password"
         name="password"

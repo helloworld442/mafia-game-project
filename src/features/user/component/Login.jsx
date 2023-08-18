@@ -1,5 +1,5 @@
 import "./Login.scss";
-import { Button, Input } from "../../ui";
+import { AuthInput, Button } from "../../ui";
 import HeaderLogo from "../../../assets/headerlogo.png";
 import { Link } from "react-router-dom";
 import { useCallback, useState } from "react";
@@ -41,7 +41,7 @@ const Login = () => {
   return (
     <form id="login-form" onSubmit={onSubmitInput}>
       <img src={HeaderLogo} alt="Mafia" id="login-logo" />
-      <Input
+      <AuthInput
         label="email"
         type="text"
         name="email"
@@ -49,7 +49,7 @@ const Login = () => {
         error={errors.email}
         onChange={onChangeInput}
       />
-      <Input
+      <AuthInput
         label="password"
         type="password"
         name="password"

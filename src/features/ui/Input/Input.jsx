@@ -1,25 +1,38 @@
 import "./Input.scss";
-import { memo } from "react";
 import classNames from "classnames";
 
-const Input = memo(({ label, type, name, value, error, onChange }) => {
-  return (
-    <div className="input-box">
-      <label htmlFor={label} className="input-label">
-        {label}
-      </label>
-      <input
-        id={label}
-        className={classNames("input", { error })}
-        type={type}
-        name={name}
-        value={value}
-        error={error}
-        onChange={onChange}
-      />
-      <span className="input-error">{error}</span>
-    </div>
-  );
-});
+const Input = ({ children }) => {
+  return <div className="input-box">{children}</div>;
+};
 
-export { Input };
+const InputLabel = ({ label }) => {
+  return (
+    <label htmlFor={label} className="input-label">
+      {label}
+    </label>
+  );
+};
+
+const InputValue = ({ label, type, name, value, error, onChange }) => {
+  return (
+    <input
+      className={classNames("input", { error })}
+      id={label}
+      type={type}
+      name={name}
+      value={value}
+      error={error}
+      onChange={onChange}
+    />
+  );
+};
+
+const InputError = ({ error }) => {
+  return <span className="input-error">{error}</span>;
+};
+
+Input.Label = InputLabel;
+Input.Value = InputValue;
+Input.Error = InputError;
+
+export default Input;
