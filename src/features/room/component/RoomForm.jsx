@@ -1,10 +1,10 @@
 import "./RoomForm.scss";
 import { Button, WriteInput, WriteSelect } from "../../ui";
 import HeaderLogo from "../../../assets/headerlogo.webp";
-import { useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 
 const RoomForm = () => {
-  const peopleOptions = ["5~10명", "10~15명", "15~20명"];
+  const peopleOptions = useMemo(() => ["5~10명", "10~15명", "15~20명"], []);
   const [form, setForm] = useState({ title: "", people: "" });
   const [errors, setErrors] = useState({ title: "", people: "" });
 
@@ -20,17 +20,17 @@ const RoomForm = () => {
     return "";
   };
 
-  const onChangeInput = (e) => {
+  const onChangeInput = useCallback((e) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
     setErrors((prev) => ({ ...prev, [name]: "" }));
-  };
+  }, []);
 
-  const onChangeSelect = (target) => {
+  const onChangeSelect = useCallback((target) => {
     const { name, value } = target;
     setForm((prev) => ({ ...prev, [name]: value }));
     setErrors((prev) => ({ ...prev, [name]: "" }));
-  };
+  }, []);
 
   const onSubmitRoom = (e) => {
     e.preventDefault();

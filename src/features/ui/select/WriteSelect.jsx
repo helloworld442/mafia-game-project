@@ -2,8 +2,9 @@ import "./Select.scss";
 import DropDown from "./Select";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { memo } from "react";
 
-const WriteSelect = ({ label, name, options, value, error, onChange }) => {
+const WriteSelect = memo(({ label, name, options, value, error, onChange }) => {
   return (
     <DropDown name={name} label={label} onChange={onChange}>
       <DropDown.Trigger value={value} error={error} trigger={<WriteSelectTrigger />} />
@@ -14,7 +15,7 @@ const WriteSelect = ({ label, name, options, value, error, onChange }) => {
       </DropDown.Menu>
     </DropDown>
   );
-};
+});
 
 const WriteSelectTrigger = () => {
   return <FontAwesomeIcon icon={faArrowDown} />;
