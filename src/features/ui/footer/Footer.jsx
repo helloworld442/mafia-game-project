@@ -16,7 +16,7 @@ const Footer = () => {
       {/* footer info 화면 에니매이션 추가 */}
       <div className={classNames("footer-info", { active })}>
         {/* footer 열람 트리커 버튼 */}
-        <h2 className="footer-dash-icon" onClick={onClickFooterIcon}>
+        <h2 className="footer-info-trigger" onClick={onClickFooterIcon}>
           <FontAwesomeIcon icon={faEllipsis} />
         </h2>
       </div>
