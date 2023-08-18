@@ -11,7 +11,7 @@ const RoomHead = () => {
 
         <Tag tag="10~15" />
 
-        <Tag tag="10~20" />
+        <Tag tag="15~20" />
 
         <Tag tag="full" />
       </div>
