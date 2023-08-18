@@ -2,7 +2,15 @@
   position: relative;
   width: 100%;
   height: 80px;
-  margin-bottom: 24px;
+}
+
+.drop-down-label {
+  position: absolute;
+  top: -24px;
+  left: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
 }
 
 .drop-down-background {
@@ -28,6 +36,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &.error {
+    border: 2px solid red;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
 }
 
 .drop-down-value {
@@ -37,6 +51,16 @@
 .drop-down-trigger {
   font-size: 1.4rem;
   font-weight: bold;
+}
+
+.drop-down-error {
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  font-size: 0.8rem;
+  font-weight: 550;
+  font-family: "Jua", sans-serif;
+  color: red;
 }
 
 .drop-down-menu {

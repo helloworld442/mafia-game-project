@@ -5,8 +5,8 @@ import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 const WriteSelect = ({ label, name, options, value, error, onChange }) => {
   return (
-    <DropDown name={name} onChange={onChange}>
-      <DropDown.Trigger value={value} trigger={<WriteSelectTrigger value={value} />} />
+    <DropDown name={name} label={label} onChange={onChange}>
+      <DropDown.Trigger value={value} error={error} trigger={<WriteSelectTrigger />} />
       <DropDown.Menu>
         {options.map((option, index) => (
           <DropDown.Item key={index} item={option} />
@@ -16,7 +16,7 @@ const WriteSelect = ({ label, name, options, value, error, onChange }) => {
   );
 };
 
-const WriteSelectTrigger = ({ value }) => {
+const WriteSelectTrigger = () => {
   return <FontAwesomeIcon icon={faArrowDown} />;
 };
 
