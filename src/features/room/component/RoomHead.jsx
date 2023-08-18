@@ -1,18 +1,27 @@
 import "./RoomHead.scss";
-import { Button } from "../../ui";
 
 const RoomHead = () => {
   return (
     <div className="room-head">
-      {/* 현제 방 갯수 블럭 */}
-      {/* <h4 className="room-head-num">300</h4> */}
-
-      {/* 방 만들기 버튼 */}
-      <Button id="room-head-button" size="medium" primary>
-        Add
-      </Button>
-
       {/* 방 제목과 방 리시트 사이 구분선 */}
+      <div className="room-head-tags">
+        <label className="room-head-tag-label people">인원 수</label>
+
+        <span className="room-head-tag people">5~10</span>
+
+        <span className="room-head-tag people">10~15</span>
+
+        <span className="room-head-tag people">10~20</span>
+
+        <span className="room-head-tag people">full</span>
+      </div>
+      <div className="room-head-tags">
+        <label className="room-head-tag-label game">진행 상황</label>
+
+        <span className="room-head-tag game">start</span>
+
+        <span className="room-head-tag game">done</span>
+      </div>
       <div className="room-head-bottom-line"></div>
     </div>
   );

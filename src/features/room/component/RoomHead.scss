@@ -1,27 +1,63 @@
 .room-head {
   position: relative;
   width: 100%;
-  height: 100px;
   padding: 0 18px;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
 }
 
-.room-head-num {
-  position: absolute;
-  top: 50%;
-  left: 18px;
+.room-head-tags {
+  position: relative;
+  width: 100%;
+  padding: 30px 0;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  overflow-x: scroll;
+}
+
+.room-head-tag-label {
   font-size: 1.2rem;
-  transform: translateY(-50%);
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-family: "Jua", sans-serif;
+  color: #333;
+
+  &.people {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &.game {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 
-#room-head-button {
-  position: absolute;
-  top: 50%;
-  right: 18px;
-  transform: translateY(-50%);
+.room-head-tags::-webkit-scrollbar {
+  display: none;
+}
+
+.room-head-tags {
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none;
+}
+
+.room-head-tag {
+  display: inline-block;
+  padding: 10px 16px;
+  border: 5px solid #333;
+  border-radius: 14px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+
+  &:hover {
+    border: 5px solid tomato;
+    color: tomato;
+  }
 }
 
 .room-head-bottom-line {

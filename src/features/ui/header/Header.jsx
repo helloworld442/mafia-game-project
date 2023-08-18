@@ -9,6 +9,9 @@ const Header = () => {
       <Link to="/">
         <img src={HeaderLogo} alt="Mafia" className="header-logo" />
       </Link>
+      <Link to="/write">
+        <span className="header-write-link">Add</span>
+      </Link>
     </header>
   );
 };
