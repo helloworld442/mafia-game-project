@@ -7,3 +7,4 @@ export * from "./input/WriteInput";
 export * from "./select/WriteSelect";
 export * from "./button/Button";
 export * from "./tag/Tag";
+export * from "./spinner/Spinner";

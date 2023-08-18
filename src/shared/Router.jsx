@@ -1,5 +1,6 @@
 import { Suspense, lazy } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Spinner } from "../features/ui";
 
 const Home = lazy(() => import("../pages/Home"));
 const Write = lazy(() => import("../pages/Write"));
@@ -10,7 +11,7 @@ const Setting = lazy(() => import("../pages/Setting"));
 const Router = () => {
   return (
     <BrowserRouter>
-      <Suspense fallback={<div>loading</div>}>
+      <Suspense fallback={<Spinner />}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/write" element={<Write />} />
