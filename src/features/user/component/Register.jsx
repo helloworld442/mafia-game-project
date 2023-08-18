@@ -59,7 +59,10 @@ const Register = () => {
 
   return (
     <form id="register-form" onSubmit={onSubmitInput}>
+      {/* 회원가입 폼 로고 */}
       <img src={HeaderLogo} alt="Mafia" id="register-logo" />
+
+      {/* 회원가입 폼 인풋 창 */}
       <AuthInput
         label="nickname"
         type="text"
@@ -84,9 +87,13 @@ const Register = () => {
         error={errors.password}
         onChange={onChangeInput}
       />
+
+      {/* 회원가입 폼 버튼 */}
       <Button size="large" fullWidth primary>
         SIGN UP
       </Button>
+
+      {/* 회원가입 폼 다른 곳 연결 링크  */}
       <Link to="/signin" id="register-footer">
         로그인 페이지
       </Link>

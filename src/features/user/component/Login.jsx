@@ -40,7 +40,10 @@ const Login = () => {
 
   return (
     <form id="login-form" onSubmit={onSubmitInput}>
+      {/* 로그인 폼 로고 */}
       <img src={HeaderLogo} alt="Mafia" id="login-logo" />
+
+      {/* 로그인 폼 인풋 창 */}
       <AuthInput
         label="email"
         type="text"
@@ -57,9 +60,13 @@ const Login = () => {
         error={errors.password}
         onChange={onChangeInput}
       />
+
+      {/* 로그인 폼 버튼 */}
       <Button size="large" fullWidth primary>
         SIGN IN
       </Button>
+
+      {/* 로그인 폼 다른 곳 연결 링크 */}
       <Link to="/signup" id="login-footer">
         회원가입 페이지
       </Link>
