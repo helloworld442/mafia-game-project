@@ -13,7 +13,7 @@ const RoomHead = () => {
       </Button>
 
       {/* 방 제목과 방 리시트 사이 구분선 */}
-      <line className="room-head-bottom-line"></line>
+      <div className="room-head-bottom-line"></div>
     </div>
   );
 };
