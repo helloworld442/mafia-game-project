@@ -18,9 +18,9 @@ const RoomHead = () => {
       <div className="room-head-tags">
         <label className="room-head-tag-label game">진행 상황</label>
 
-        <span className="room-head-tag game">start</span>
+        <span className="room-head-tag game">진행 중</span>
 
-        <span className="room-head-tag game">done</span>
+        <span className="room-head-tag game">대기 중</span>
       </div>
       <div className="room-head-bottom-line"></div>
     </div>

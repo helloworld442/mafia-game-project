@@ -1,6 +1,8 @@
 import "./RoomItem.scss";
 import { RoomDetail } from "./RoomDetail";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHatCowboy } from "@fortawesome/free-solid-svg-icons";
 
 const RoomItem = () => {
   const data = { id: 1, title: "채팅 룹입니당", full: "1 / 8", game: "start" };
@@ -14,7 +16,10 @@ const RoomItem = () => {
     <>
       <li className="room-item" onClick={onOpenModal}>
         {/* 방 고유 아이디 */}
-        <h4 className="room-item-id">1</h4>
+        <h4 className="room-item-id">
+          <FontAwesomeIcon icon={faHatCowboy} />
+          <span className="item-id">1</span>
+        </h4>
 
         {/* 방 고유 제목 */}
         <h2 className="room-item-title">채팅 룸입니당</h2>
