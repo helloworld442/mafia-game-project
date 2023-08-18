@@ -5,7 +5,7 @@ const RoomHead = () => {
   return (
     <div className="room-head">
       {/* 현제 방 갯수 블럭 */}
-      <h4 className="room-head-num">현재 방 : 300</h4>
+      {/* <h4 className="room-head-num">300</h4> */}
 
       {/* 방 만들기 버튼 */}
       <Button id="room-head-button" size="medium" primary>

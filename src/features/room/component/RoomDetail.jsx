@@ -11,6 +11,9 @@ const RoomDetail = ({ isOpen, data, onClose }) => {
       <div className={classNames("room-detail-info", { active: isOpen })}>
         {isOpen && (
           <>
+            {/* 상세 페이지 고유 이미지 */}
+            <img className="room-detail-img" src={data.imgsrc} alt="imgSrc" />
+
             {/* 상세 페이지 고유 번호  */}
             <span className="room-detail-id">{data.id}</span>
 
