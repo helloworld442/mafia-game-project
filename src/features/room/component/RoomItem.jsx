@@ -1,9 +1,9 @@
 import "./RoomItem.scss";
 import { RoomDetail } from "./RoomDetail";
 import { useState } from "react";
-import BloodImg from "../../../assets/blood.png";
-import BloodImg2 from "../../../assets/blood2.png";
-import BloodImg3 from "../../../assets/blood3.png";
+import BloodImg from "../../../assets/blood.webp";
+import BloodImg2 from "../../../assets/blood2.webp";
+import BloodImg3 from "../../../assets/blood3.webp";
 
 const RoomItem = () => {
   const imgData = [BloodImg, BloodImg2, BloodImg3];
