@@ -7,7 +7,10 @@ const RoomDetail = ({ isOpen, data, onClose }) => {
     <div className={classNames("room-detail", { active: isOpen })}>
       {isOpen && (
         <>
-          {/* 방 고유 번호  */}
+          {/* 상세 페이지 배경 */}
+          <div className="room-detail-background"></div>
+
+          {/* 상세 페이지 고유 번호  */}
           <span className="room-detail-id">{data.id}</span>
 
           {/* 상세 페이지 나가기 버튼 */}
